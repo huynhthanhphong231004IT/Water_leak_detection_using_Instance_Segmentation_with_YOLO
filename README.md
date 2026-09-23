@@ -11,10 +11,10 @@
 <b>Researchs:</b> Artificial Intelligence in Education - Mathematics in Deep Learning and Machine Learning<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<mark><b><b>Name Project:</b></b> </mark> Detecting potholes, traffic signs, and vehicles using YOLO for autonomous vehicles.<br>
+<mark><b><b>Name Project:</b></b> </mark> Instance Segmentation and Dynamic Prediction for Water Leaks Using YOLO and Euler Integration. <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<mark><b><b>Link Data:</b></b> </mark> https://www.kaggle.com/datasets/reorioll/autonomous-vehicle<br>
+<mark><b><b>Link Data:</b></b> </mark> https://www.kaggle.com/datasets/reorioll/leakwater-data <br>
 
 </p>
 <p align="center">
