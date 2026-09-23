@@ -113,14 +113,14 @@ $$\text{Cảnh báo} = \begin{cases}
 
 
 <p align="center">
-  <img src="Charts/DanhGia_Mask.png" width="800">
+  <img src="Charts/DanhGia_Mask.png" width="600">
   <br>
   <i>Kết quả đánh giá phân đoạn (Mask) của mô hình qua các đường cong hiệu năng.</i>
 </p>
 
 
 <p align="center">
-  <img src="Charts/DanhGia_Box.png" width="800">
+  <img src="Charts/DanhGia_Box.png" width="600">
   <br>
   <i>Kết quả đánh giá khung bao (Bounding Box) của mô hình qua các đường cong hiệu năng.</i>
 </p>
