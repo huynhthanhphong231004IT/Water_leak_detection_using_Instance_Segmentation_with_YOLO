@@ -63,3 +63,31 @@ if __name__ == "__main__":
     WaterLeak_InstanceSegmentation.Predict(model_path, video_input_path, video_output_path)
 
 ```
+
+## Biểu thức tổng quan về tích phân số Euler
+
+#### 1. Công thức tính lưu lượng rò rỉ (Q)
+
+$$Q = (A_{\text{pixel}} \times k_{\text{pixelToM2}}) \times C_f \times 1000 \quad \text{(lít/giây)}$$
+
+\- $A_{\text{pixel}}$: Diện tích vết leak nhận diện từ YOLO (pixel).
+
+\- $k_{\text{pixelToM2}}$: Tỷ lệ quy đổi pixel sang $m^2$.
+
+\- $C_f$: Hệ số tốc độ lưu lượng dòng chảy.
+
+\- $1000$: Hằng số quy đổi từ $m^3$ sang lít (L) ($1\text{ m}^3 = 1000\text{ lít}$).
+
+#### 2. Công thức tính tổng thể tích nước tích lũy (V) & Điều kiện cảnh báo
+
+Sử dụng <mark>phương pháp tích phân số Euler</mark> để cộng dồn thể tích nước chảy qua từng khoảng thời gian $\Delta t$ giữa các frame.
+
+$$V_{\text{tổng}} = V_{\text{cũ}} + (Q \times \Delta t) \quad \text{(lít)}$$
+
+Điều kiện phát cảnh báo (Alert):
+
+$$\text{Cảnh báo} = \begin{cases} \mathbf{TRUE} & \text{khi } V_{\text{tổng}} > V_{\text{ngưỡng}} \\ \mathbf{FALSE} & \text{khi } V_{\text{tổng}} \le V_{\text{ngưỡng}} \end{cases}$$
+
+\- $\Delta t$: Khoảng thời gian giữa 2 lần nhận diện (`dt = current_time - last_time`).
+
+\- $V_{\text{ngưỡng}}$: Ngưỡng thể tích giới hạn cho phép (`Spillway_crest`).
