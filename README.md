@@ -102,5 +102,34 @@ $$\text{Cảnh báo} = \begin{cases}
 
 \- $V_{\text{ngưỡng}}$: Ngưỡng thể tích giới hạn cho phép (`Spillway_crest`).
 
+## Kết quả huấn luyện mô hình Yolo11n instance segmentation trên tập dữ liệu leakwater-data
+
+
+<p align="center">
+  <img src="Charts/results.png" width="800">
+  <br>
+  <i>Quá trình huấn luyện mô hình yolo11n</i>
+</p>
+
+
+<p align="center">
+  <img src="Charts/DanhGia_Mask.png" width="800">
+  <br>
+  <i>Kết quả đánh giá phân đoạn (Mask) của mô hình qua các đường cong hiệu năng.</i>
+</p>
+
+
+<p align="center">
+  <img src="Charts/DanhGia_Box.png" width="800">
+  <br>
+  <i>Kết quả đánh giá khung bao (Bounding Box) của mô hình qua các đường cong hiệu năng.</i>
+</p>
+
+
+<p align="center">
+  <img src="Charts/Val_batch.png" width="800">
+  <br>
+  <i>Minh họa kết quả nhận diện và phân đoạn rò rỉ nước trên một số ảnh mẫu thuộc tập kiểm thử.</i>
+</p>
 
 
