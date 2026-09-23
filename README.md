@@ -30,3 +30,17 @@ Kaggle: https://www.kaggle.com/reorioll <br>
 Youtobe: https://www.youtube.com/@ReoRioll-2304CICTCTU <br>
 </p>
 <br>
+
+
+## Kết quả kiểm thử trên video giao thông thực tế
+<p align="center">
+  <img src="Images/Predict_output_img/Predict_output_img_01.jpg" width="600">
+  <img src="Images/Predict_output_img/Predict_output_img_02.png" width="600">
+
+  <br>
+  <i>Đánh giá hệ thống nhận diện và cảnh báo mức độ rò rỉ của nước.</i>
+</p>
+
+```python
+!git clone https://github.com/huynhthanhphong231004IT/Detecting_potholes_traffic_signs_an_vehicle_using_YOLO.git
+```
