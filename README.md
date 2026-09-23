@@ -80,14 +80,27 @@ $$Q = (A_{\text{pixel}} \times k_{\text{pixelToM2}}) \times C_f \times 1000 \qua
 
 #### 2. Công thức tính tổng thể tích nước tích lũy (V) & Điều kiện cảnh báo
 
+$$V(t) = \int_{0}^{t} Q(\tau) \, d\tau \quad \text{(lít)}$$
+
 Sử dụng <mark>phương pháp tích phân số Euler</mark> để cộng dồn thể tích nước chảy qua từng khoảng thời gian $\Delta t$ giữa các frame.
 
-$$V_{\text{tổng}} = V_{\text{cũ}} + (Q \times \Delta t) \quad \text{(lít)}$$
+$$V^{(t)} = V^{(t-1)} + Q(t) \cdot \Delta t \quad \text{(lít)}$$
 
-Điều kiện phát cảnh báo (Alert):
+\- $V^{(t)}$: Tổng thể tích tích lũy tại thời điểm hiện tại.
 
-$$\text{Cảnh báo} = \begin{cases} \mathbf{TRUE} & \text{khi } V_{\text{tổng}} > V_{\text{ngưỡng}} \\ \mathbf{FALSE} & \text{khi } V_{\text{tổng}} \le V_{\text{ngưỡng}} \end{cases}$$
+\- $V^{(t-1)}$: Thể tích tích lũy ở bước/frame trước đó.
 
 \- $\Delta t$: Khoảng thời gian giữa 2 lần nhận diện (`dt = current_time - last_time`).
 
+Điều kiện phát cảnh báo (Alert):
+
+$$\text{Cảnh báo} = \begin{cases} 
+\mathbf{TRUE} & \text{khi } V_{\text{tổng}} > V_{\text{ngưỡng}} \\ 
+\mathbf{FALSE} & \text{khi } V_{\text{tổng}} \le V_{\text{ngưỡng}} 
+\end{cases}$$
+
+
 \- $V_{\text{ngưỡng}}$: Ngưỡng thể tích giới hạn cho phép (`Spillway_crest`).
+
+
+
